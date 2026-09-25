@@ -22,6 +22,7 @@ body {
   min-width: 320px;
   background: #080808;
   color: #f5f5f5;
+  overflow-x: hidden;
 }
 
 a {
@@ -32,4 +33,276 @@ a {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  /* ---------- NAVBAR ---------- */
+
+  header > div {
+    height: 72px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  header > div > a:first-child {
+    font-size: 14px !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  header > div > a:last-child {
+    padding: 9px 14px !important;
+    font-size: 12px !important;
+  }
+
+  /* ---------- HERO ---------- */
+
+  main > section:first-child {
+    min-height: auto !important;
+    padding-top: 72px !important;
+  }
+
+  main > section:first-child > div.relative.z-10 {
+    min-height: auto !important;
+    min-height: 850px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 70px !important;
+    padding-bottom: 40px !important;
+    display: block !important;
+  }
+
+  /* Hero text */
+  main > section:first-child > div.relative.z-10 > div.relative.z-30 {
+    width: 100% !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Small heading */
+  main > section:first-child .mb-12 {
+    margin-bottom: 28px !important;
+    gap: 10px !important;
+  }
+
+  main > section:first-child .mb-12 > span:first-child {
+    width: 28px !important;
+  }
+
+  main > section:first-child .mb-12 > span:last-child {
+    font-size: 10px !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  /* Main hero heading */
+  main > section:first-child h1 {
+    max-width: 100% !important;
+    font-size: clamp(48px, 15vw, 72px) !important;
+    line-height: 0.94 !important;
+    letter-spacing: -0.055em !important;
+  }
+
+  /* Hero description */
+  main > section:first-child p {
+    max-width: 100% !important;
+    margin-top: 28px !important;
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+  }
+
+  /* Hero skill chips */
+  main > section:first-child .mt-8 {
+    margin-top: 24px !important;
+  }
+
+  main > section:first-child .mt-8 span {
+    padding: 7px 12px !important;
+    font-size: 11px !important;
+  }
+
+  /* Hero buttons */
+  main > section:first-child .mt-10 {
+    margin-top: 24px !important;
+    gap: 10px !important;
+  }
+
+  main > section:first-child .mt-10 a {
+    padding: 11px 16px !important;
+    font-size: 13px !important;
+  }
+
+  /* ---------- PHOTO ---------- */
+
+  /*
+   * Desktop photo settings remain untouched.
+   * On mobile, the photo moves behind the lower hero area
+   * so the text remains readable.
+   */
+  main > section:first-child > div.relative.z-10 > div.absolute {
+    left: 5% !important;
+    top: 420px !important;
+    bottom: 0 !important;
+    width: 95% !important;
+    height: 480px !important;
+    opacity: 0.82;
+  }
+
+  /* Hide decorative photo text on small screens */
+  main > section:first-child > div.relative.z-10 > div.absolute
+    > div:nth-last-child(2) {
+    display: none !important;
+  }
+
+  /* Experience indicator */
+  main > section:first-child > div.relative.z-10 > div.absolute
+    > div:last-child {
+    right: 8% !important;
+    bottom: 8% !important;
+  }
+
+  main > section:first-child > div.relative.z-10 > div.absolute
+    > div:last-child p:last-child {
+    font-size: 22px !important;
+  }
+
+  /* ---------- ALL SECTIONS ---------- */
+
+  main > section:not(:first-child) {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+
+  main > section:not(:first-child) h2 {
+    font-size: clamp(38px, 11vw, 54px) !important;
+    line-height: 1.05 !important;
+  }
+
+  /* About */
+  #about p:last-child {
+    margin-top: 24px !important;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+  }
+
+  /* ---------- EXPERIENCE ---------- */
+
+  #experience h2 {
+    margin-bottom: 50px !important;
+  }
+
+  #experience .grid {
+    display: block !important;
+  }
+
+  #experience .grid > div:first-child {
+    margin-bottom: 14px !important;
+  }
+
+  #experience h3 {
+    font-size: 26px !important;
+  }
+
+  #experience p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  /* ---------- PROJECTS ---------- */
+
+  #projects .grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  #projects .grid > div {
+    padding: 24px !important;
+  }
+
+  #projects h3 {
+    font-size: 26px !important;
+  }
+
+  #projects p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ---------- SKILLS ---------- */
+
+  #skills .grid {
+    grid-template-columns: 1fr !important;
+    gap: 38px !important;
+  }
+
+  #skills h3 {
+    font-size: 19px !important;
+    margin-bottom: 12px !important;
+  }
+
+  #skills p {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+  }
+
+  /* ---------- CONTACT ---------- */
+
+  #contact .flex {
+    display: block !important;
+  }
+
+  #contact h2 {
+    max-width: 100% !important;
+  }
+
+  #contact p {
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+  }
+
+  #contact a {
+    margin-top: 28px !important;
+    padding: 13px 20px !important;
+    font-size: 14px !important;
+  }
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+
+  footer > div {
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  main > section:first-child > div.relative.z-10 {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  main > section:first-child h1 {
+    font-size: clamp(58px, 7vw, 86px) !important;
+  }
+
+  main > section:first-child p {
+    font-size: 16px !important;
+  }
+
+  main > section:not(:first-child) {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
 }
